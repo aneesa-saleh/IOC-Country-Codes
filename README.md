@@ -2,9 +2,15 @@
 IOC country codes mapped to country names. 
 
 ### Usage
-Adds a global object `IOCCodes` with a function `name`. `name` takes an IOC country code as an argument and returns the name of the country.
+JSON file `IOCCountryNames.json` contains an object to map IOC codes to country names. To get the country name coresponding to an IOC code, use `countryNames[code]`.
 
-Example: `IOCCodes.name("GER")`
+Example: 
+```
+  //request JSON file and save in variable countryNames
+  var country = countryNames["GER"]; 
+  console.log(country);
+```
+This will print out "Germany".
 
 ### Country Codes Source
 [Judo Info](http://judoinfo.com/ioccodes/).
